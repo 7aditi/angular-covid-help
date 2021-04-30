@@ -1,0 +1,30 @@
+.footer {
+  /* position: absolute; */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #e9eff4;
+  color: #53575b;
+  text-align: center;
+  padding: 10px;
+  margin-top: 0;
+  height: auto;
+  min-height: 100%;
+}
+
+.footer-title {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.footer-content {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: left;
+  padding: 0 10px 0 10px;
+}

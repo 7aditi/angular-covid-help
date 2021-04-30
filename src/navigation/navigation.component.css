@@ -1,0 +1,32 @@
+#titleName {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  padding-left: 10px;
+}
+
+.navbar {
+  background: #3e54d3;
+}
+
+#link {
+  color: #ffffff;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.nav-link {
+  font-family: Lato;
+  font-style: normal;
+  font-size: 14px;
+}
+
+
+

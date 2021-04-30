@@ -1,0 +1,125 @@
+p {
+  font-family: Lato;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.updateInfo {
+  padding: 20px 20px 40px 20px;
+  background: #d0dae2;
+  margin: 0;
+  /* display: flex; */
+  flex-flow: column;
+  height: 540px;
+}
+
+.btn-location {
+  background: #ffffff;
+  border: 0.5px solid #d0dae2;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: #53575b;
+  width: 301px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 7px;
+}
+
+.info-button {
+  margin: 5px;
+}
+
+.card-buttons {
+  margin-top: 10px;
+}
+
+.three-button-card {
+  padding-bottom: 35px;
+}
+
+.card-body {
+  align-items: center;
+  justify-items: center;
+  /* padding: 10px; */
+}
+
+.btn-primary {
+  background-color: #4f80e2;
+  font-family: Lato;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+
+.updates-title {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.list-group-item {
+  background-color: #d0dae2;
+  font-family: Lato;
+  font-style: normal;
+  font-size: 14px;
+}
+
+.location-title {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  color: #53575b;
+  text-align: right;
+  margin: 5px;
+  padding: 5px;
+}
+
+.dropdown {
+  font-family: Lato;
+  font-style: normal;
+  font-size: 14px;
+  margin: 10px;
+}
+
+.dropdown-menu {
+  width: 301px;
+}
+
+.dropdown-item {
+  color: #53575b;
+}
+
+#dropdownMenuButton {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  height: 46px;
+  width: 301px;
+}
+
+.dropdown-color {
+  color: #ffffff !important;
+}
+
+.card-title {
+  font-family: Lato;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: bold;
+  color: #53575b;
+}
+
+/* Laptop */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .updateInfo {
+    height: 640px;
+  }
+}
