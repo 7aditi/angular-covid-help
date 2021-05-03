@@ -19,8 +19,8 @@ import "bootstrap";
 export class AppComponent {
   name = "Angular " + VERSION.major;
 
-  url_city = 'https://towness.co.in/web/';
-  gid = 'fruits-vegetables';
+  url_city = 'https://docs.google.com/spreadsheets/d/10dlb3LJ9x5CtUgMQGTupTcpQRoS_cclpfCA6YDLUSLY/edit?usp=sharing';
+  gid = '';
   gid_collection = [];
   city = 'Mumbai';
 
