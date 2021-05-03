@@ -1,11 +1,10 @@
-<app-navigation name="{{ name }}"></app-navigation>
+<app-navigation></app-navigation>
 
 <div class="row text-center">
-  <div class="col-sm-8">
-
+  <div class="col-sm-9">
     <!-- Dropdown for location starts-->
      
-    <div class="dropdown">
+    <!-- <div class="dropdown">
       <span class="location-title">Location</span><br>
   <button class="btn btn-secondary btn-location dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Mumbai<span class="caret"></span>
@@ -16,16 +15,19 @@
     <li><a class="dropdown-item" href="#" data-value="Pune">Pune</a></li>
     <li><a class="dropdown-item" href="#" data-value="Chennai">Chennai</a></li>
   </ul>
-</div>
+</div> -->
   
-  <!-- <label class = "location-title">Location</label><br>
-  <select formControlName="cities" id="cities" class="btn btn-secondary btn-location dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <option [ngValue]="undefined" selected>Mumbai</option>
-    <option *ngFor="let order of cities; let i = index" [value]="cities[i].id">
+  <div class="dropdown">
+    <label class = "location-title">Location</label><br>
+    <div class = "select-toggle">
+      <select id="cities" [(ngModel)]="city" (ngModelChange)="getURL()" class="btn btn-location dropdown-toggle" type="button" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
+        <option [ngValue]="undefined" [value]="defaultCity" selected>Mumbai</option>
+        <option class="dropdown-item" *ngFor="let order of cities; let i = index" [value]="cities[i].name">
       {{cities[i].name}} 
-    </option>
-  </select> -->
- 
+        </option>
+      </select>
+    </div>
+  </div>
 
 <!-- Dropdown for location ends-->
 
@@ -35,10 +37,10 @@
       <div class="card-body">
         <h5 class="card-title">Oxygen Requirements</h5>
         
-        <a href="#" class="btn btn-primary btn-block">Oxygen Cylinder</a>
-        <a href="#" class="btn btn-primary btn-block">Oxygen Concentrators</a>
-        <a href="#" class="btn btn-primary btn-block">Hospital Oxygen Beds</a>
-        <a href="#" class="btn btn-primary btn-block">ICU and Ventilator</a>
+        <a href="{{url_city}}{{gid}}" target="_blank" class="btn btn-primary btn-block">Oxygen Cylinder</a>
+        <a href="{{url_city}}{{gid}}" target="_blank" class="btn btn-primary btn-block">Oxygen Concentrators</a>
+        <a href="{{url_city}}{{gid}}" target="_blank" class="btn btn-primary btn-block">Hospital Oxygen Beds</a>
+        <a href="{{url_city}}{{gid}}" target="_blank" class="btn btn-primary btn-block">ICU and Ventilator</a>
       </div>
     </div>
   </div>
@@ -46,9 +48,9 @@
     <div class="card">
       <div class="card-body three-button-card">
         <h5 class="card-title">Special treatment</h5>
-        <a href="#" class="btn btn-primary btn-block">Remidisivir</a>
-        <a href="#" class="btn btn-primary btn-block">Tocilizumab</a>
-        <a href="#" class="btn btn-primary btn-block">Plasma Centers</a>
+        <a href="{{url_city}}{{gid}}" target="_blank" class="btn btn-primary btn-block">Remidisivir</a>
+        <a href="{{url_city}}{{gid}}" target="_blank" class="btn btn-primary btn-block">Tocilizumab</a>
+        <a href="{{url_city}}{{gid}}" target="_blank" class="btn btn-primary btn-block">Plasma Centers</a>
         <br>
       </div>
     </div>
@@ -57,10 +59,10 @@
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Home Treatments</h5>
-        <a href="#" class="btn btn-primary btn-block">Home Oxygen Beds</a>
-        <a href="#" class="btn btn-primary btn-block">Home ICU Bed set up</a>
-        <a href="#" class="btn btn-primary btn-block">Home Quaratine Expertise</a>
-        <a href="#" class="btn btn-primary btn-block">Doctors</a>
+        <a href="{{url_city}}{{gid}}" target="_blank" class="btn btn-primary btn-block">Home Oxygen Beds</a>
+        <a href="{{url_city}}{{gid}}" target="_blank" class="btn btn-primary btn-block">Home ICU Bed set up</a>
+        <a href="{{url_city}}{{gid}}" target="_blank" class="btn btn-primary btn-block">Home Quaratine Expertise</a>
+        <a href="{{url_city}}{{gid}}" target="_blank" class="btn btn-primary btn-block">Doctors</a>
       </div>
     </div>
   </div>
@@ -68,7 +70,7 @@
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Labs</h5>
-        <a href="#" class="btn btn-primary btn-block">Diagnostic Labs</a>
+        <a href="{{url_city}}{{gid}}" target="_blank" class="btn btn-primary btn-block">Diagnostic Labs</a>
       </div>
     </div>
   </div>
@@ -76,7 +78,7 @@
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Food</h5>
-        <a href="#" class="btn btn-primary btn-block">Food for Covid</a>
+        <a href="{{url_city}}{{gid}}" target="_blank" class="btn btn-primary btn-block">Food for Covid</a>
       </div>
     </div>
   </div>
@@ -85,7 +87,7 @@
 
 <!-- Latest Updates Section -->
 
-  <div class="col-sm-4 updateInfo">
+  <div class="col-sm-3 updateInfo">
     <h5 class = "updates-title">Latest Updates</h5>
     <div class = "updatesContent">
      <ul class="list-group list-group-flush">
@@ -100,6 +102,8 @@
     </ul>
     </div>
   </div>
+
   <!-- Latest Updates Section End-->
+
 </div>
 <app-footer></app-footer>

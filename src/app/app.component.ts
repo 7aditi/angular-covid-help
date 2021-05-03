@@ -19,23 +19,54 @@ import "bootstrap";
 export class AppComponent {
   name = "Angular " + VERSION.major;
 
-  // form: FormGroup;
-  // cities = [];
+  url_city = 'https://towness.co.in/web/';
+  gid = 'fruits-vegetables';
+  gid_collection = [];
+  city = 'Mumbai';
 
-  // constructor(private formBuilder: FormBuilder) {
-  //   this.form = this.formBuilder.group({
-  //     cities: ['']
-  //   });
+  form: FormGroup;
+  cities = [];
+  defaultCity = 'Mumbai';
 
-  //   this.cities = this.getCities();
-  // }
+  constructor(private formBuilder: FormBuilder) {
+    this.form = this.formBuilder.group({
+      cities: ['']
+    });
 
-  // getCities() {
-  //   return [
-  //     { id: '1', name: 'Mumbai' },
-  //     { id: '2', name: 'Chennai' },
-  //     { id: '3', name: 'Bengaluru' },
-  //     { id: '4', name: 'Pune' }
-  //   ];
-  // }
+    this.cities = this.getCities();
+  }
+
+  getCities() {
+    return [
+      // { id: '0', name: 'Mumbai' , url: ''},
+      { name: 'Chennai'},
+      { name: 'Bengaluru'},
+      { name: 'Pune'}
+    ];
+  }
+
+/* Change URL's based on the city chosen */
+
+  getURL(){
+    switch(this.city){
+      case 'Chennai': {
+        this.url_city = 'https://stackoverflow.com/questions/45062093';
+        this.gid = '/right-way-to-call-a-function-after-selected-option-angular-4';
+        console.log(this.city);
+        break;
+      }
+      case 'Bengaluru': {
+        this.url_city = 'https://docs.angularjs.org/api/ng/directive/'
+        this.gid = 'ngHref';
+        console.log(this.city)
+        break;
+      }
+      default: {
+        this.url_city = 'Mumbai'
+        console.log(this.city)
+        break;
+      }
+    }
+  }
+  
 }
