@@ -11,7 +11,6 @@ import { map } from "rxjs/operators";
   styleUrls: ["./navigation.component.css"]
 })
 export class NavigationBarComponent implements OnInit {
-  @Input() name: string;
 
   isOpen = false;
 
