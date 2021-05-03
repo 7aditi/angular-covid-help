@@ -1,5 +1,4 @@
 <app-navigation></app-navigation>
-
 <div class="row text-center">
   <div class="col-sm-9">
     <!-- Dropdown for location starts-->
@@ -21,7 +20,7 @@
     <label class = "location-title">Location</label><br>
     <div class = "select-toggle">
       <select id="cities" [(ngModel)]="city" (ngModelChange)="getURL()" class="btn btn-location dropdown-toggle" type="button" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
-        <option [ngValue]="undefined" [value]="defaultCity" selected>Mumbai</option>
+        <option [ngValue]="undefined" [value]="defaultCity" selected>Delhi</option>
         <option class="dropdown-item" *ngFor="let order of cities; let i = index" [value]="cities[i].name">
       {{cities[i].name}} 
         </option>
@@ -37,10 +36,10 @@
       <div class="card-body">
         <h5 class="card-title">Oxygen Requirements</h5>
         
-        <a href="{{url_city}}{{gid}}" target="_blank" class="btn btn-primary btn-block">Oxygen Cylinder</a>
-        <a href="{{url_city}}{{gid}}" target="_blank" class="btn btn-primary btn-block">Oxygen Concentrators</a>
-        <a href="{{url_city}}{{gid}}" target="_blank" class="btn btn-primary btn-block">Hospital Oxygen Beds</a>
-        <a href="{{url_city}}{{gid}}" target="_blank" class="btn btn-primary btn-block">ICU and Ventilator</a>
+        <a href="{{url_city}}{{gidList[0].gid}}" target="_blank" class="btn btn-primary btn-block">Oxygen Cylinder</a>
+        <a href="{{url_city}}{{gidList[1].gid}}" target="_blank" class="btn btn-primary btn-block">Oxygen Concentrators</a>
+        <a href="{{url_city}}{{gidList[2].gid}}" target="_blank" class="btn btn-primary btn-block">Hospital Oxygen Beds</a>
+        <a href="{{url_city}}{{gidList[3].gid}}" target="_blank" class="btn btn-primary btn-block">ICU and Ventilator</a>
       </div>
     </div>
   </div>
@@ -48,9 +47,9 @@
     <div class="card">
       <div class="card-body three-button-card">
         <h5 class="card-title">Special treatment</h5>
-        <a href="{{url_city}}{{gid}}" target="_blank" class="btn btn-primary btn-block">Remidisivir</a>
-        <a href="{{url_city}}{{gid}}" target="_blank" class="btn btn-primary btn-block">Tocilizumab</a>
-        <a href="{{url_city}}{{gid}}" target="_blank" class="btn btn-primary btn-block">Plasma Centers</a>
+        <a href="{{url_city}}{{gidList[4].gid}}" target="_blank" class="btn btn-primary btn-block">Remidisivir</a>
+        <a href="{{url_city}}{{gidList[5].gid}}" target="_blank" class="btn btn-primary btn-block">Tocilizumab</a>
+        <a href="{{url_city}}{{gidList[6].gid}}" target="_blank" class="btn btn-primary btn-block">Plasma Centers</a>
         <br>
       </div>
     </div>
@@ -59,10 +58,10 @@
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Home Treatments</h5>
-        <a href="{{url_city}}{{gid}}" target="_blank" class="btn btn-primary btn-block">Home Oxygen Beds</a>
-        <a href="{{url_city}}{{gid}}" target="_blank" class="btn btn-primary btn-block">Home ICU Bed set up</a>
-        <a href="{{url_city}}{{gid}}" target="_blank" class="btn btn-primary btn-block">Home Quaratine Expertise</a>
-        <a href="{{url_city}}{{gid}}" target="_blank" class="btn btn-primary btn-block">Doctors</a>
+        <a href="{{url_city}}{{gidList[7].gid}}" target="_blank" class="btn btn-primary btn-block">Home Oxygen Beds</a>
+        <a href="{{url_city}}{{gidList[8].gid}}}" target="_blank" class="btn btn-primary btn-block">Home ICU Bed set up</a>
+        <a href="{{url_city}}{{gidList[9].gid}}" target="_blank" class="btn btn-primary btn-block">Home Quaratine Expertise</a>
+        <a href="{{url_city}}{{gidList[10].gid}}" target="_blank" class="btn btn-primary btn-block">Doctors</a>
       </div>
     </div>
   </div>
@@ -70,7 +69,7 @@
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Labs</h5>
-        <a href="{{url_city}}{{gid}}" target="_blank" class="btn btn-primary btn-block">Diagnostic Labs</a>
+        <a href="{{url_city}}{{gidList[11].gid}}" target="_blank" class="btn btn-primary btn-block">Diagnostic Labs</a>
       </div>
     </div>
   </div>
@@ -78,7 +77,7 @@
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Food</h5>
-        <a href="{{url_city}}{{gid}}" target="_blank" class="btn btn-primary btn-block">Food for Covid</a>
+        <a href="{{url_city}}{{gidList[12].gid}}" target="_blank" class="btn btn-primary btn-block">Food for Covid</a>
       </div>
     </div>
   </div>

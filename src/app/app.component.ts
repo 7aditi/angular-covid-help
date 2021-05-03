@@ -16,17 +16,50 @@ import "bootstrap";
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"]
 })
-export class AppComponent {
-  name = "Angular " + VERSION.major;
 
-  url_city = 'https://docs.google.com/spreadsheets/d/10dlb3LJ9x5CtUgMQGTupTcpQRoS_cclpfCA6YDLUSLY/edit?usp=sharing';
-  gid = '';
-  gid_collection = [];
-  city = 'Mumbai';
+export class AppComponent {
+  title = 'bharatAid';
+
+
+  url_city = 'https://docs.google.com/spreadsheets/d/10dlb3LJ9x5CtUgMQGTupTcpQRoS_cclpfCA6YDLUSLY/edit#';
+  gid = 'gid=1562230121';
+  gidList = [{name: 'Oxygen Cylinder', gid: 'gid=1562230121'},
+  {name: 'Oxygen Concentrators', gid: 'gid=69755716'},
+  {name: 'Hospital Oxygen Beds', gid: 'gid=700865304'},
+  {name: 'ICU and Ventilator', gid: 'gid=1415697092'},
+  {name: 'Remidisvir', gid: 'gid=1545067565'},
+  {name: 'Tocilizumab', gid: 'gid=1149996940'},
+  {name: 'Plasma Centers', gid: 'gid=1644043701'},
+  {name: 'Home Oxygen Beds', gid: 'gid=822783878'},
+  {name: 'Home Hospital Bed Set Up', gid: 'gid=401667408'},
+  {name: 'Home Quarantine Expertise', gid: 'gid=749255842'},
+  {name: 'Doctors', gid: 'gid=338143185'},
+  {name: 'Diagnostic Labs', gid: 'gid=1836744924'},
+  {name: 'Food', gid: 'gid=1909887876'}];
+
+  city = 'Delhi';
+
+  gidListDelhi = [{name: 'Oxygen Cylinder', gid: 'gid=1562230121'},
+  {name: 'Oxygen Concentrators', gid: 'gid=69755716'},
+  {name: 'Hospital Oxygen Beds', gid: 'gid=700865304'},
+  {name: 'ICU and Ventilator', gid: 'gid=1415697092'},
+  {name: 'Remidisvir', gid: 'gid=1545067565'},
+  {name: 'Tocilizumab', gid: 'gid=1149996940'},
+  {name: 'Plasma Centers', gid: 'gid=1644043701'},
+  {name: 'Home Oxygen Beds', gid: 'gid=822783878'},
+  {name: 'Home Hospital Bed Set Up', gid: 'gid=401667408'},
+  {name: 'Home Quarantine Expertise', gid: 'gid=749255842'},
+  {name: 'Doctors', gid: 'gid=338143185'},
+  {name: 'Diagnostic Labs', gid: 'gid=1836744924'},
+  {name: 'Food', gid: 'gid=1909887876'}
+];
 
   form: FormGroup;
-  cities = [];
-  defaultCity = 'Mumbai';
+  cities = [{ name: 'Mumbai'},
+  { name: 'Chennai'},
+  { name: 'Bengaluru'},
+  { name: 'Pune'}];
+  defaultCity = 'Delhi';
 
   constructor(private formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
@@ -39,6 +72,7 @@ export class AppComponent {
   getCities() {
     return [
       // { id: '0', name: 'Mumbai' , url: ''},
+      { name: 'Mumbai'},
       { name: 'Chennai'},
       { name: 'Bengaluru'},
       { name: 'Pune'}
@@ -62,11 +96,11 @@ export class AppComponent {
         break;
       }
       default: {
-        this.url_city = 'Mumbai'
+        this.url_city = 'https://docs.google.com/spreadsheets/d/10dlb3LJ9x5CtUgMQGTupTcpQRoS_cclpfCA6YDLUSLY/edit?usp=sharing'
+        this.gidList = this.gidListDelhi;
         console.log(this.city)
         break;
       }
     }
   }
-  
 }
